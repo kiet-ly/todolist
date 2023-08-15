@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo list</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css">
+  </head>
+  <body>
+    <div id="page">
+      <div class="task date">
+        <span>Date:</span>
+        <input type="text" value="08" maxlength="2" />
+        <span>/</span>
+        <input type="text" value="08" maxlength="2" />
+        <span>/</span>
+        <span>2023</span>
+      </div>
+      <div class="task wait">
+        <div class="checkbox">
+          <div class="box-checkbox" onclick="toggleCheckBox(this)"></div>
+        </div>
+        <input
+          class="txtTask"
+          type="text"
+          placeholder="Oh Yeah"
+          oninput="taskEvent(event)"
+          onkeydown="handleNextAndPreviousElement(event)"
+        />
+        <div class="wait-checkbox"></div>
+      </div>
+
+      <div class="task" tabindex="1"></div>
+      <div class="task" tabindex="2"></div>
+      <div class="task"></div>
+      <div class="task"></div>
+      <div class="task"></div>
+      <div class="task"></div>
+      <div class="task"></div>
+      <div class="task"></div>
+      <div class="task"></div>
+      <div class="task"></div>
+    </div>
+
+    <template id="task-content">
+      <div class="checkbox">
+        <div class="box-checkbox" onclick="toggleCheckBox(this)"></div>
+      </div>
+      <input
+        class="txtTask"
+        type="text"
+        oninput="taskEvent(event)"
+        onkeydown="handleNextAndPreviousElement(event)"
+      />
+      <div class="wait-checkbox"></div>
+    </template>
+
+    <script src="todolist.js"></script>
+  </body>
+</html>

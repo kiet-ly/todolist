@@ -1,0 +1,12 @@
+@media screen and (max-width: 680px) {
+  #page {
+    width: 100vw;
+  }
+  .checkbox {
+    flex-basis: 12%;
+  }
+
+  .task.wait .wait-checkbox {
+    left: 17px;
+  }
+}
